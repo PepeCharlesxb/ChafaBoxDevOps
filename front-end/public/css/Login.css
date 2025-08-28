@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: rgb(185, 185, 185);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 30px;
+  color: #711515;
+}
+
+/* Botones de rol */
+.role-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #dfe6e9;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #241549;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.role-btn.activo {
+  background-color: #711515;
+  color: white;
+}
+
+.role-btn:hover {
+  background-color: #a4b0be;
+}
+
+/* Campos */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2f3542;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced6e0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #1e3d59;
+  outline: none;
+}
+
+/* Contraseña con ícono */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced6e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-wrapper button {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+  color: #636e72;
+  font-size: 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-wrapper button:hover {
+  color: #1e3d59;
+}
+
+
+/* Botón enviar */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #711515;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #163247;
+}
+
+/* Mensaje de error */
+.hidden {
+  display: none;
+}
+
+#error-message {
+  color: #d63031;
+  background-color: #ffeaea;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
