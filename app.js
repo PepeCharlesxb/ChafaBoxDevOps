@@ -17,7 +17,7 @@ app.use('/api', apiRoutes);
 
 // Ruta para vista principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front/views/index.html'));
+  res.sendFile(path.join(__dirname, 'front/views/Login.html'));
 });
 
 app.listen(PORT, () => {
