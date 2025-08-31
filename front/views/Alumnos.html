@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Añadir Alumno</title>
+  <link rel="stylesheet" href="/css/estilos_a.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2>➕ Añadir</h2>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="noControl">No. Control:</label>
+        <input type="text" id="noControl" name="noControl">
+      </div>
+
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena">
+      </div>
+
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion">
+      </div>
+
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario">
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo">
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+      </div>
+
+      <div class="form-group">
+        <label for="carrera">Carrera:</label>
+        <select id="carrera" name="carrera">
+          <option value="">Selecciona carrera</option>
+          <option value="ISC">Ingeniería en Sistemas</option>
+          <option value="IGE">Ingeniería en Gestión Empresarial</option>
+          <option value="II">Ingeniería Industrial</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="semestre">Semestre:</label>
+        <select id="semestre" name="semestre">
+          <option value="">Selecciona semestre</option>
+          <option value="1">1°</option>
+          <option value="2">2°</option>
+          <option value="3">3°</option>
+          <option value="4">4°</option>
+          <option value="5">5°</option>
+          <option value="6">6°</option>
+          <option value="7">7°</option>
+          <option value="8">8°</option>
+          <option value="9">9°</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="foto">Subir foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Agregar</button>
+        <button type="reset" class="cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
