@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/alumnos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front/views/Alumnoss.html'));
+  res.sendFile(path.join(__dirname, 'front/views/Alumnos.html'));
 });
 
 
