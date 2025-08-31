@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     if (res.ok) {
       alert('Login exitoso');
       // Redirigir a otra página
-      window.location.href = '/dashboard.html';
+      window.location.href = '/Alumnos';
     } else {
       alert(data.message);
     }
