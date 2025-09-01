@@ -17,11 +17,11 @@ app.use('/api', apiRoutes);
 
 // Ruta para vista principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front/views/Alumnos.html'));
+  res.sendFile(path.join(__dirname, 'front/views/Login.html'));
 });
 
 app.get('/alumnos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front/views/.html'));
+  res.sendFile(path.join(__dirname, 'front/views/Alumnos.html'));
 });
 
 
