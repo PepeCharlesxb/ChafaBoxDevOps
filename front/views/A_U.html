@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Usuario</title>
+  <link rel="stylesheet" href="/css/estilos_a.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2>➕ Agregar Usuario</h2>
+    </div>
+
+    <form action="/usuarios/agregar" method="post" enctype="multipart/form-data">
+      <!-- Usuario -->
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </div>
+
+      <!-- Dirección -->
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion">
+      </div>
+
+      <!-- Correo -->
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo">
+      </div>
+
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <!-- Teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}">
+      </div>
+
+      <!-- Rol -->
+      <div class="form-group">
+        <label for="rol">Rol:</label>
+        <select id="rol" name="rol" required>
+          <option value="">Selecciona rol</option>
+          <option value="alumno">Alumno</option>
+          <option value="docente">Docente</option>
+          <option value="administrativo">Administrativo</option>
+        </select>
+      </div>
+
+      <!-- Campos específicos de Alumno -->
+      <div id="alumno-fields" class="hidden">
+        <div class="form-group">
+          <label for="carrera">Carrera:</label>
+          <select id="carrera" name="carrera">
+            <option value="">Selecciona carrera</option>
+            <option value="sistemas">Ing. Sistemas</option>
+            <option value="civil">Ing. Civil</option>
+            <option value="industrial">Ing. Industrial</option>
+            <!-- Más carreras -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_ingreso">Fecha de ingreso:</label>
+          <input type="date" id="fecha_ingreso" name="fecha_ingreso">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_egreso">Fecha de egreso:</label>
+          <input type="date" id="fecha_egreso" name="fecha_egreso">
+        </div>
+
+        <div class="form-group">
+          <label for="semestre_actual">Semestre actual:</label>
+          <input type="number" id="semestre_actual" name="semestre_actual" min="1" max="12">
+        </div>
+      </div>
+
+      <!-- Campos específicos de Docente -->
+      <div id="docente-fields" class="hidden">
+        <div class="form-group">
+          <label for="cedula_profesional">Cédula Profesional:</label>
+          <input type="text" id="cedula_profesional" name="cedula_profesional" maxlength="20">
+        </div>
+
+        <div class="form-group">
+          <label for="especialidad">Especialidad:</label>
+          <input type="text" id="especialidad" name="especialidad" maxlength="100">
+        </div>
+      </div>
+
+      <!-- Campos específicos de Administrativo -->
+      <div id="administrativo-fields" class="hidden">
+        <div class="form-group">
+          <label for="departamento">Departamento:</label>
+          <input type="text" id="departamento" name="departamento" maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="puesto">Puesto:</label>
+          <input type="text" id="puesto" name="puesto" maxlength="100">
+        </div>
+      </div>
+
+      <!-- Foto -->
+      <div class="form-group">
+        <label for="foto">Subir foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </div>
+
+      <!-- Botones -->
+      <div class="buttons">
+        <button type="submit">Agregar</button>
+        <button type="reset" class="cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const rolSelect = document.getElementById("rol");
+    const alumnoFields = document.getElementById("alumno-fields");
+    const docenteFields = document.getElementById("docente-fields");
+    const administrativoFields = document.getElementById("administrativo-fields");
+
+    rolSelect.addEventListener("change", function() {
+      alumnoFields.classList.add("hidden");
+      docenteFields.classList.add("hidden");
+      administrativoFields.classList.add("hidden");
+
+      if (this.value === "alumno") {
+        alumnoFields.classList.remove("hidden");
+      } else if (this.value === "docente") {
+        docenteFields.classList.remove("hidden");
+      } else if (this.value === "administrativo") {
+        administrativoFields.classList.remove("hidden");
+      }
+    });
+  </script>
+
+</body>
+</html>
